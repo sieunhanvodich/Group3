@@ -35,13 +35,22 @@ div.center ul{border:1px solid #c1c1c1!important}
 				<div class="show-menu"></div>
 				<div id="menu">
 				    <nav>
-						<ul id="nav" class="">
-
-
-
-<li id="menu-item-204309" class="menu-dangky menu-item menu-item-type-custom menu-item-object-custom menu-item-204309"><a href="http://localhost:3000/signup">Đăng ký</a></li>
-<li id="menu-item-1962" class="menu-dangnhap menu-item menu-item-type-custom menu-item-object-custom menu-item-1962"><a rel="nofollow" href="http://localhost:3000/login">Đăng nhập</a></li>
-</ul>				    
+						<% if session[:user_id] != nil %>
+							<ul id="nav" class="">
+							
+							<li class="menu-dangnhap "><a rel="nofollow" >  Welcome  </a></li>
+							
+							
+							<li class="menu-dangnhap "><a rel="nofollow" >  Đăng xuất  </a></li>
+							</ul>	
+						<% else %>
+							<ul id="nav" class="">
+							<li id="menu-item-204309" class="menu-dangky menu-item menu-item-type-custom menu-item-object-custom menu-item-204309"><a href="http://localhost:3000/signup">Đăng ký</a></li>
+							<li id="menu-item-1962" class="menu-dangnhap menu-item menu-item-type-custom menu-item-object-custom menu-item-1962"><a rel="nofollow" href="http://localhost:3000/login">Đăng nhập</a></li>
+						</ul>
+							
+						<% end %>
+							  
 					</nav>
 				</div>
 		    </div>

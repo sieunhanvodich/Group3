@@ -1,13 +1,18 @@
-<div class="login">
+<div class="login" >
 	<div class="container">
 		<div class="form">
 
-      <h1>Log in</h1>
+      			<br>
+      			<br>
+      			<br>
+      			<br>
+
+      		<!-- <h1 style="text-transform: uppercase; font-size: 20px"> Login</h1> -->
 			
 			<%= form_for(:session, url: login_path) do |f| %> 
 			  <%= f.email_field :email, :placeholder => "Email" %> 
 			  <%= f.password_field :password, :placeholder => "Password" %> 
-			  <%= f.submit "Log in", class: "btn-submit" %>
+			  <%= f.submit "Đăng nhập", class: "btn-submit" %>
 			<% end %>
 		
     </div>

@@ -37,6 +37,7 @@ div.center ul{border:1px solid #c1c1c1!important}
 				    <nav>
 				    <ul id="nav" class="">
 						<% if current_user %> 
+						
     <li style="color: red; text-transform: uppercase">Welcome, <%= current_user.email %></li> 
     <li id="menu-item-204309" class="menu-dangky menu-item menu-item-type-custom menu-item-object-custom menu-item-204309"><%= link_to "Log out", logout_path, method: "delete" %></li> 
 <% else %> 

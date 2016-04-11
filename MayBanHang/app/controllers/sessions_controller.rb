@@ -7,7 +7,8 @@ class SessionsController < ApplicationController
             session[:user_id] = @user.id
             redirect_to '/'
         else
-            redirect_to 'login'
+            redirect_to 'http://localhost:3000/login'
+            flash[:error]="Email does not exist! Please try again"
         end 
     end
     def destroy 

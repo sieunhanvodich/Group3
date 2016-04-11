@@ -8,7 +8,7 @@ class SessionsController < ApplicationController
             redirect_to '/'
         else
             redirect_to 'http://localhost:3000/login'
-            flash[:error]="Email does not exist! Please try again"
+            flash[:error]="Email hoặc mật khẩu không chính xác"
         end 
     end
     def destroy 

@@ -6,10 +6,6 @@ html, body {
   padding: 0;
   text-transform: lowercase;
 }
-.flashemail {
-  float: left;
-  width: 100%;
-}
 .container {
   padding: 0;
   width: 100%;
@@ -124,12 +120,23 @@ html, body {
 /* FORM PAGES */
 
 
+.flashemail {
+  float:right;
+  font-size: 20px;
+  margin-right:5px;
+  
+  box-sizing: border-box ;
+  
+  
+}
+
 .form {
   text-align:center;
   margin: 0 auto 10px;
   padding: 20px 0 10px 0;
   font-size: 16px;
   width: 300px;
+  
 }
 
 input[type=text],

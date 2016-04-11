@@ -39,10 +39,10 @@ div.center ul{border:1px solid #c1c1c1!important}
 						<% if current_user %> 
 						
     <li style="color: red; text-transform: uppercase">Welcome, <%= current_user.email %></li> 
-    <li id="menu-item-204309" class="menu-dangky menu-item menu-item-type-custom menu-item-object-custom menu-item-204309"><%= link_to "Log out", logout_path, method: "delete" %></li> 
+    <li id="menu-item-204309" class="menu-dangky menu-item menu-item-type-custom menu-item-object-custom menu-item-204309"><%= link_to "Logout", logout_path, method: "delete" %></li> 
 <% else %> 
-<li id="menu-item-204309" class="menu-dangky menu-item menu-item-type-custom menu-item-object-custom menu-item-204309"><a href="http://localhost:3000/signup">Đăng ký</a></li>
-<li id="menu-item-1962" class="menu-dangnhap menu-item menu-item-type-custom menu-item-object-custom menu-item-1962"><a rel="nofollow" href="http://localhost:3000/login">Đăng nhập</a></li>
+<li id="menu-item-204309" class="menu-dangky menu-item menu-item-type-custom menu-item-object-custom menu-item-204309"><a href="http://localhost:3000/signup">Signup</a></li>
+<li id="menu-item-1962" class="menu-dangnhap menu-item menu-item-type-custom menu-item-object-custom menu-item-1962"><a rel="nofollow" href="http://localhost:3000/login">Login</a></li>
 <% end %>
 </ul>
 							  

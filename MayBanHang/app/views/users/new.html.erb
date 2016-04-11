@@ -1,5 +1,14 @@
 <div class="login">
+
   <div class="container">
+ <br>
+ <br>
+<a href="/login">
+        <p class="signupp1"> đăng nhập </p>
+      </a>
+      <a href="/">
+        <p class="homepagep1"> trang chủ </p>
+      </a>
     <div class="form">
 
     <br>
@@ -8,10 +17,10 @@
     <br>
 
     <%= form_for(@user) do |f| %>
-      <%= f.text_field :first_name, :placeholder => "First name*" %>
-      <%= f.text_field :last_name, :placeholder => "Last name (optional)" %>
-      <%= f.email_field :email, :placeholder => "Email*" %>
-      <%= f.password_field :password, :placeholder => "Password*" %>
+      <%= f.text_field :first_name, :placeholder => "First name" %>
+      <%= f.text_field :last_name, :placeholder => "Last name" %>
+      <%= f.email_field :email, :placeholder => "Email" %>
+      <%= f.password_field :password, :placeholder => "Password" %>
       <%= f.submit "Đăng ký", class: "btn-submit" %>
     <% end %>
 

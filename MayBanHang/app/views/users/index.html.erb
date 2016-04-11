@@ -19,7 +19,7 @@ div.center ul{border:1px solid #c1c1c1!important}
 				    <ul id="nav" class="">
 						<% if current_user %> 
 						
-    <li style="color: red; text-transform: uppercase">Welcome, <%= current_user.email %></li> 
+    <li style="color: red; text-transform: uppercase">Welcome, <%= current_user.first_name %></li> 
     <li id="menu-item-204309" class="menu-dangky menu-item menu-item-type-custom menu-item-object-custom menu-item-204309"><%= link_to "Đăng xuất", logout_path, method: "delete" %></li> 
 <% else %> 
 <li id="menu-item-204309" class="menu-dangky menu-item menu-item-type-custom menu-item-object-custom menu-item-204309"><%= link_to "Đăng ký", signup_path %></li>
@@ -66,9 +66,15 @@ div.center ul{border:1px solid #c1c1c1!important}
 				<p class="p8">Quản lý từ xa qua điện thoại</p>
 			</a> -->
 			<!-- <img src="http://maybanhang.net/wp-content/themes/Chameleon/images/loading-lazyload.gif" data-original="http://maybanhang.net/wp-content/themes/Chameleon/images/page-home-new/img22.png" class="lazy-load img1" alt="phần mềm bán hàng"> -->
+			<% if current_user %>
+			<a href="/tables">
+				<p class="p9" style="font-size: 16px;">Sử dụng phần mềm</p>
+			</a>
+			<% else %>
 			<a href="/signup">
 				<p class="p9">Đăng ký ngay</p>
 			</a>
+			<% end %>
 			
 		</div>
 		

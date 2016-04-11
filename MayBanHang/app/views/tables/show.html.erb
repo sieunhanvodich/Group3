@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @table.title %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @table.description %>
+</p>
+
+<p>
+  <strong>Price:</strong>
+  <%= @table.price %>
+</p>
+<div id="bills_wrapper">
+ <%= render @table.bills %>
+ <div id="form">
+ <%= render "bills/form" %>
+ </div>
+ </div>
+<%= link_to 'Edit', edit_table_path(@table) %> |
+<%= link_to 'Back', tables_path %>

@@ -1,4 +1,11 @@
 Rails.application.routes.draw do
+  resources :tables do
+    resources :bills do
+      member do
+        patch :complete
+      end
+    end
+  end
   get 'signup'  => 'users#new' 
   resources :users
   root 'users#index'

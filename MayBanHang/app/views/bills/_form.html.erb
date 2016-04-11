@@ -1,0 +1,4 @@
+<%= form_for([@table, @table.bills.build]) do |f| %>
+<%= f.text_field :content, placeholder: "new order" %>
+<%= f.submit %>
+<% end %>

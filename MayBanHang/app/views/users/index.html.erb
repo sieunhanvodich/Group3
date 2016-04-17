@@ -47,10 +47,15 @@ div.center ul{border:1px solid #c1c1c1!important}
 	<div class="wrap-banner">
 		<!-- <div class="wrap-banner" > -->
 		<div class="banner banner1">
-			
+			<% if current_user %>
+			<a href="/categories">
+				<p class="p9">app</p>
+			</a>
+			<% else %>
 			<a href="/signup">
 				<p class="p9">Đăng ký ngay</p>
 			</a>
+			<% end %>
 			
 		</div>
 		

@@ -1,0 +1,9 @@
+<div class="row clearfix">
+		<div class="item">
+			<p><%= item.content %></p>
+		</div>
+		<div class="trash">
+			<%= link_to "delete", category_item_path(@category, item.id), method: :delete, data: { confirm: "Are you sure?" } %>
+		</div>
+	
+</div>

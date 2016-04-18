@@ -1,4 +1,6 @@
+<div style="width: 300px">
 <%= form_for([@category, @category.items.build]) do |f| %>
-	<%= f.text_field :content, placeholder: "New category" %>
+	<%= f.text_field :content, placeholder: "New item" %>
 	<%= f.submit %>
 <% end %>
+</div>

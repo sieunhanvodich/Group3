@@ -1,27 +1,24 @@
-<h1>Listing categories</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>Content</th>
-      <th>Description</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+<div class="categorycontainer">
+<div id="categorycontainer1">
 
-  <tbody>
-    <% @categories.each do |category| %>
-      <tr>
-        <td><%= category.content %></td>
-        <td><%= category.description %></td>
-        <td><%= link_to 'Show', category %></td>
-        <td><%= link_to 'Edit', edit_category_path(category) %></td>
-        <td><%= link_to 'Destroy', category, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+</div>
+<div id="categorycontainer2">
 
-<br>
 
-<%= link_to 'New Category', new_category_path %>
+
+  <% @categories.each do |category| %>
+  <div class="category_index_row clearfix">
+    <h2 class="category_content"><%= link_to category.content, category %></h2>
+    <p class="category_description"><%= link_to category.description, category %></p>
+    
+  <% end %>
+
+  <div class="links">
+  <%= link_to 'New Category', new_category_path %>
+  </div>
+
+
+
+</div>
+</div>

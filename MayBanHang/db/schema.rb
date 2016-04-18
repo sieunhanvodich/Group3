@@ -13,17 +13,6 @@
 
 ActiveRecord::Schema.define(version: 20160417073540) do
 
-  create_table "bills", force: true do |t|
-    t.string   "content"
-    t.integer  "price"
-    t.integer  "table_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.datetime "completed_at"
-  end
-
-  add_index "bills", ["table_id"], name: "index_bills_on_table_id"
-
   create_table "categories", force: true do |t|
     t.string   "content"
     t.text     "description"
@@ -40,14 +29,6 @@ ActiveRecord::Schema.define(version: 20160417073540) do
   end
 
   add_index "items", ["category_id"], name: "index_items_on_category_id"
-
-  create_table "tables", force: true do |t|
-    t.string   "title"
-    t.string   "description"
-    t.string   "price"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
 
   create_table "users", force: true do |t|
     t.string   "first_name"

@@ -19,7 +19,7 @@ div.center ul{border:1px solid #c1c1c1!important}
 				    <ul id="nav" class="">
 						<% if current_user %> 
 						
-    <li style="color: red; text-transform: uppercase">Welcome, <%= current_user.email %></li> 
+    <li style="color: red; text-transform: uppercase">Welcome, <%= current_user.first_name %></li> 
     <li id="menu-item-204309" class="menu-dangky menu-item menu-item-type-custom menu-item-object-custom menu-item-204309"><%= link_to "Đăng xuất", logout_path, method: "delete" %></li> 
 <% else %> 
 <li id="menu-item-204309" class="menu-dangky menu-item menu-item-type-custom menu-item-object-custom menu-item-204309"><%= link_to "Đăng ký", signup_path %></li>
@@ -49,8 +49,7 @@ div.center ul{border:1px solid #c1c1c1!important}
 		<div class="banner banner1">
 			<% if current_user %>
 			<a href="/categories">
-				<p class="p9">app</p>
-			</a>
+				 <p class="p9">Vào ứng dụng</p> 
 			<% else %>
 			<a href="/signup">
 				<p class="p9">Đăng ký ngay</p>

@@ -1,6 +1,7 @@
 <div style="width: 300px">
 <%= form_for([@category, @category.items.build]) do |f| %>
 	<%= f.text_field :content, placeholder: "New item" %>
+	<%= f.text_field :price, placeholder: "New price" %>
 	<%= f.submit %>
 <% end %>
 </div>

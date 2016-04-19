@@ -8,6 +8,8 @@ Feature: Adding new categories
 			And I should see "Vào ứng dụng" button
 		When I press Vào ứng dụng I should see categories page
 			And I press "New Category"
-			And I fill in the form
+			And I fill in the category form
 		Then I should see the annoucement "Category was successfully created."
+
+	
 

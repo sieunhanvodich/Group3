@@ -6,6 +6,11 @@ Given(/^I should see "([^"]*)" button$/) do |app|
   expect(app).to have_content("Vào ứng dụng")
 end
 
+Given(/^I click "([^"]*)"$/) do |link|
+  click_link(link)
+end
+
+
 
 When(/^I press Vào ứng dụng I should see categories page$/) do 
   visit categories_path
@@ -16,7 +21,7 @@ When(/^I press "([^"]*)"$/) do |link|
 end
 
 
-When(/^I fill in the form$/) do
+When(/^I fill in the category form$/) do
   visit new_category_path
   fill_in "content", :with => "Fish"
   fill_in "description", :with => "dead"

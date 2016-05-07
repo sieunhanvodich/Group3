@@ -15,9 +15,8 @@
 
 <div class="tab-content">
 	<% @categories.each do |category| %>
-    <div id="<%= category.id %>" class="tab-pane">
-      <%= category.description %>	
-
+    <div id="<%= category.id %>" class="tab-pane">	
+      <iframe height="199px" width="100%" scrolling="auto" src="<%= category.id %>"></iframe>
     </div>
     <% end %>
   </div>

@@ -1,0 +1,21 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @table.title %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @table.description %>
+</p>
+
+<div id="orders_wrapper">
+	<%= render @table.orders %>
+	<div id="form">
+		<%= render "orders/form" %>
+	</div>
+</div>
+
+<%= link_to 'Edit', edit_table_path(@table) %> |
+<%= link_to 'Back', tables_path %>

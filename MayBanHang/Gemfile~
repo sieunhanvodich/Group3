@@ -39,6 +39,7 @@ gem 'bcrypt', '~> 3.1.7'
 # gem 'debugger', group: [:development, :test]
 gem 'rspec-rails'
 gem 'capybara'
+gem 'simplecov'
 
 group :test do
   gem 'cucumber-rails', :require => false

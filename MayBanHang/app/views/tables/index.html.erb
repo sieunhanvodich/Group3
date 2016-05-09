@@ -1,27 +1,33 @@
-<h1 class="category_content">Listing tables</h1>
+<!-- <h1 class="category_content">Listing tables</h1> -->
 
-<table>
+<!-- <table>
   <thead>
     <tr>
       <th>Table's Name    </th>
       <th>Number of guesses</th>
       <th colspan="5"></th>
     </tr>
-  </thead>
+  </thead> -->
 
-  <tbody>
+  <!-- <tbody> -->
+ 
     <% @tables.each do |table| %>
-      <tr>
-        <td><%= table.title %></td>
-        <td><%= table.description %></td>
-        <td><%= link_to image_tag("images.png"), table %></td>
-        <td><%= link_to 'Edit', edit_table_path(table) %></td>
-        <td><%= link_to 'Destroy', table, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
+      <!-- <tr> -->
+        <div class="table-order">
+        
+        <div><a href="tables/<%=table.id %>"><span class="glyphicon glyphicon-cutlery" style="font-size: 60px;"> </span> </a></div>
+        <div style="font-size: 20px">
+        <%= table.id %>
+        </div>
+        
+     </div>
     <% end %>
-  </tbody>
-</table>
 
-<br>
 
-<%= link_to 'New Table', new_table_path %>
+  
+
+
+<div class="plus"><a href="tables/new"><span class="glyphicon glyphicon-plus" style="font-size: 35px">
+<br><br>
+</span> </a>
+</div>

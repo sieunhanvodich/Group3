@@ -28,7 +28,7 @@ class TablesController < ApplicationController
 
     respond_to do |format|
       if @table.save
-        format.html { redirect_to @table, notice: 'Table was successfully created.' }
+        format.html { redirect_to "/tables", notice: 'Table was successfully created.' }
         format.json { render :show, status: :created, location: @table }
       else
         format.html { render :new }

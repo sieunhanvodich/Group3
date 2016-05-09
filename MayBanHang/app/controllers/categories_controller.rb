@@ -30,10 +30,12 @@ class CategoriesController < ApplicationController
       if @category.save
         format.html { redirect_to @category, notice: 'Category was successfully created.' }
         format.json { render :show, status: :created, location: @category }
+        format.js { render js: 'window.top.location.href = "/categories";' }
       else
         format.html { render :new }
         format.json { render json: @category.errors, status: :unprocessable_entity }
       end
+
     end
   end
 
@@ -58,6 +60,7 @@ class CategoriesController < ApplicationController
     respond_to do |format|
       format.html { redirect_to categories_url, notice: 'Category was successfully destroyed.' }
       format.json { head :no_content }
+      format.js { render js: 'window.top.location.href = "/categories";' }
     end
   end
 

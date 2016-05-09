@@ -1,6 +1,9 @@
 <p id="notice"><%= notice %></p>
 
-
+<p>
+  <strong style="text-transform: capitalize; text-align: center;">Table </strong>
+  <%= @table.id %>
+</p>
 
 <p>
   <strong style="text-transform: capitalize; text-align: center;">Number of Guesses:</strong>
@@ -15,4 +18,5 @@
 </div>
 
 
-<%= link_to 'Edit', edit_table_path(@table) %>
+<%= link_to 'Edit', edit_table_path(@table) %> |
+<%= link_to 'Back', tables_path %>

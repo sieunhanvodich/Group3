@@ -1,5 +1,46 @@
+
+.table-order{
+  width: 50px;
+  height: 100px;
+  text-align: center;
+  display: inline-block;
+  margin: 20px;
+
+}
+.table-order1{
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  display: inline;
+  margin: 10px;
+}
+.table-order2{
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  display: inline;
+  margin: 20px;
+
+}
+.plus{
+  width: 50px;
+  height: 100px;
+  text-align: center;
+  display: inline;
+  margin:30px;
+  
+}
+/*.floating-box {
+    float: left;
+    width: 150px;
+    height: 75px;
+    margin: 10px;
+    border: 3px solid #73AD21;  
+}*/
+
 @import "bootstrap";
 @import "bootstrap-sprockets";
+
 
 
 html, body {
@@ -5040,3 +5081,7 @@ ul{
    .login {
    background-image: url('b2.png');
    }
+
+
+
+   

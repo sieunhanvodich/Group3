@@ -1,7 +1,8 @@
 
 		<div class="item">
-			<p><%= item.content %></p>
-			<p><%= item.price %></p>
+			<span class="ionicons ion-android-restaurant" style="font-size: 40px"><span style="font-size: 20px" ><%= item.content %> : <%= item.price %></span></span>
+			
+			
 		</div>
 		<div class="trash">
 			<%= link_to "delete", category_item_path(@category, item.id), method: :delete, data: { confirm: "Are you sure?" } %>

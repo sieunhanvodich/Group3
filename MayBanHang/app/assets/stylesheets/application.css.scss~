@@ -1,6 +1,3 @@
-@import 'ionicons';
-
-
 
 .table-order{
   width: 50px;
@@ -130,7 +127,7 @@ html, body {
 .category_index_row1 {
   padding: 2em;
   border-bottom: 1px solid rgba(250,250,250, .3);
-  height: 100%;
+  height: 750px;
   .category_description {
     margin-bottom: 0;
   }

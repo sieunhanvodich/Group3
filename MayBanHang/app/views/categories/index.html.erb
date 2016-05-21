@@ -8,14 +8,14 @@
 
  <ul class="nav nav-tabs">
  	<% @categories.each do |category| %>
-  	<li role="presentation" style="margin:2px; border-radius: 10px; background-color: #CAE5E8"> <a data-toggle="tab" href="#<%= category.id %>"> <%= category.content %> </a> </li>
+  	<li role="presentation" style="margin:2px; border-radius: 10px; background-color: #CAE5E8; text-transform: uppercase;"> <a data-toggle="tab" href="#<%= category.id %>"> <%= category.content %> </a> </li>
 	<% end %>
 	<li style="margin:2px; border-radius: 10px; background-color: #CAE5E8; font-size: 10px" role="presentation" > <a data-toggle="tab" href="#add"> <span class="glyphicon glyphicon-plus" style="font-size: 17px"> </a></li>
 </ul>
 
 <div class="tab-content">
 	<% @categories.each do |category| %>
-    <div id="<%= category.id %>" class="tab-pane">	
+    <div id="<%= category.id %>" class="tab-pane" >	
       <iframe height="300px" width="100%" scrolling="auto" style="border: none; border-radius: 10px;" src="categories/<%= category.id %>"></iframe>
     </div>
     <% end %>

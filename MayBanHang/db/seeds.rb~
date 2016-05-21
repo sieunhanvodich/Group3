@@ -9,7 +9,7 @@ Category.create!([
   {content: "Fresh", description: ""},
   {content: "Frappucino", description: ""},
   {content: "Iced tea", description: ""},
-  {content: "Hot tea", description: ""}
+  {content: "hot tea", description: ""}
 ])
 Item.create!([
   {content: "Cà phê đen", price: "20000", category_id: 1},

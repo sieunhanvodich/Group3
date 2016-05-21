@@ -3,6 +3,11 @@ class CategoriesController < ApplicationController
 
   # GET /categories
   # GET /categories.json
+
+  def menu
+    @items = Item.all
+  end
+
   def index
     @categories = Category.all
   end

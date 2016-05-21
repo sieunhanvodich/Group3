@@ -1,7 +1,10 @@
 class ItemsController < ApplicationController
 	before_action :set_category
 	before_action :set_item, except: [:create]
-
+	def menu
+		@items = Item.all
+	end
+	
 	def create
 		@item = @category.items.create(item_params)
 		redirect_to @category

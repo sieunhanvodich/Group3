@@ -1,3 +1,4 @@
+<div>
 <p id="notice"><%= notice %></p>
 
 
@@ -7,12 +8,17 @@
   <%= @table.description %>
 </p>
 
-<div id="orders_wrapper" style="width: 220px">
+<div style="width: 40%; display: inline; float: left;">
 	<%= render @table.orders %>
 	<div id="form">
 		<%= render "orders/form" %>
 	</div>
 </div>
 
+<div>
+	<iframe width="60%" height="1000px" style="display: inline; float: right;" src="/menu"></iframe>
+</div>
+
 
 <%= link_to 'Edit', edit_table_path(@table) %>
+</div>

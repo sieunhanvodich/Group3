@@ -22,9 +22,13 @@
   </script>
 
 
-</head>
+<!-- </head>
 <body>
-
+<% if current_user %>
+  <%= link_to "Đăng xuất", logout_path, method: "delete" %>
+<% else %>
+  <%= link_to "Đăng nhập", login_path %>
+<% end %> -->
 <%= yield %>
 
 

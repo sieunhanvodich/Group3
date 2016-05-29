@@ -2,23 +2,23 @@
 <p id="notice"><%= notice %></p>
 
 
-
+<div style="width: 40%; display: inline; float: left;">
 <p>
   <strong style="text-transform: capitalize; text-align: center;">Number of Guesses:</strong>
   <%= @table.description %>
 </p>
 
-<div style="width: 40%; display: inline; float: left;">
+
 	<%= render @table.orders %>
 	<div id="form">
 		<%= render "orders/form" %>
 	</div>
+<%= link_to 'Edit', edit_table_path(@table) %>
 </div>
 
 <div>
-	<iframe width="60%" height="1000px" style="display: inline; float: right;" src="/menu"></iframe>
+	<iframe width="50%" height="700px" style="display: inline; float: right; border: none" src="/menu"></iframe>
 </div>
 
 
-<%= link_to 'Edit', edit_table_path(@table) %>
 </div>

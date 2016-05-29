@@ -1,4 +1,4 @@
-<div class="row clearfix">
+<div>
 	<% if order.completed? %>
 		<div class="complete">
 		 	<% link_to "Mark as Complete", complete_table_order_path(@table, order.id), method: :patch %>

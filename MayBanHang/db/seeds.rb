@@ -54,3 +54,13 @@ Item.create!([
   {content: "Trà mạn", price: "12000", category_id: 11},
   {content: "Green Mate", price: "30000", category_id: 11}
 ])
+Table.create!([
+  {title: nil, description: "2"},
+  {title: nil, description: "3"},
+  {title: nil, description: "4"},
+  {title: nil, description: "4"},
+  {title: nil, description: "5"}
+])
+User.create!([
+  {first_name: "Thanh", last_name: "pham tien", email: "vic.geniusgaming@gmail.com", password_digest: "$2a$10$f0FHqZtJwn0MPuRcq/rzyuaPXFDZt0QCWQ9bqO9QD60sAHvSA2FBG"}
+])

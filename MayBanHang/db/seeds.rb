@@ -59,8 +59,14 @@ Table.create!([
   {title: nil, description: "3"},
   {title: nil, description: "4"},
   {title: nil, description: "4"},
-  {title: nil, description: "5"}
+  {title: nil, description: "5"},
+  {title: nil, description: "2"},
+  {title: nil, description: "4"},
+  {title: nil, description: "3"},
+  {title: nil, description: "2"}
 ])
 User.create!([
-  {first_name: "Thanh", last_name: "pham tien", email: "vic.geniusgaming@gmail.com", password_digest: "$2a$10$f0FHqZtJwn0MPuRcq/rzyuaPXFDZt0QCWQ9bqO9QD60sAHvSA2FBG"}
+  {first_name: "Thanh", last_name: "pham tien", email: "vic.geniusgaming@gmail.com", password_digest: "$2a$10$f0FHqZtJwn0MPuRcq/rzyuaPXFDZt0QCWQ9bqO9QD60sAHvSA2FBG", admin: false},
+  {first_name: "vu", last_name: "vic", email: "vicnoob@gmail.com", password_digest: "$2a$10$2UEdB6/94ifqCa58ObpI7.wuEw3mhAaQYyQWXUQbwr2qIzeRat3ba", admin: true},
+  {first_name: "dduc", last_name: "minh", email: "ducminh@gmail.com", password_digest: "$2a$10$luKeOWGVQEMTzns4vSEyYuaRZ2dUmdE6V/i.vCSVNuRE7WQn6PwGa", admin: false}
 ])

@@ -1,7 +1,6 @@
 <head>
-	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js">
-     var a;
-
+	<script type="text/javascript">
+    var a;
     function change(a){
         alert(a);
         window.top.location.reload(true);
@@ -10,7 +9,7 @@
 
      var innerWindow = document.getElementById('myFrame').contentWindow;
     innerWindow.change= change;
-    
+
     </script>
 
 </head>

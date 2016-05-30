@@ -19,4 +19,5 @@ Rails.application.routes.draw do
   delete 'logout' => 'sessions#destroy'
   get '/main' => 'categories#index'
   get '/menu' => 'categories#menu'
+  
 end

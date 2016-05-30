@@ -1,27 +1,50 @@
 <%= form_for([@table, @table.orders.build]) do |f| %>
-<p id="demo"></p>
-	<%= f.text_field :content, placeholder: " What do you want to order? " %>
+<h2> Order: </h2>
+<p id="orders"></p>
+<h2> Price: </h2>
+<p id="price"></p>
+	<% f.text_field :content, placeholder: " What do you want to order? " %>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
 <script type="text/javascript">
 
 	var x;
+	var textall = '';
+	var sum =0;
 	function change(x){
 		var box = $("#text-box");
 	    /*$("ol").append("<li>" + itemcontent + "</li>");*/
-	    box.val(box.val() + x );
+	    box.val( x );
 	}
     
     function myFunction() {
+        
         var text = document.getElementById("text-box").value;
-        document.getElementById("demo").innerHTML = text;
+        var thenum = text.replace( /^\D+/g, '');
+        var convert = parseInt(thenum);
+       
+
+        textall = document.cookie;
+        sum = sum + convert;
+        textall = textall + "<br>" + text;
+        document.getElementById("orders").innerHTML = textall;
+        document.getElementById("price").innerHTML =  sum;
+        document.cookie = textall;
     }
 
 	var innerWindow = document.getElementById('myFrame').contentWindow;
     innerWindow.change= change;
 
-</script>
-	
-            <textarea id="text-box"></textarea>
-            <input type="button" onclick="myFunction()" value ="Add to bill" id="go" />
+    function deleteAll(){
+        textall = '';
+        sum = 0;
+        document.cookie = '';
+        window.location.reload(true);
+    }
 
+</script>
+	<form onsubmit="return false;">
+            <textarea id="text-box"></textarea>
+            <input type="button" onclick="deleteAll(); return false;" value ="Delete All Orders" id="go" />
+            <input type="button" onclick="myFunction(); return false;" value ="Add to bill" id="go" />
+    </form>
     <% end %>

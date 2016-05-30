@@ -5,7 +5,9 @@ class CategoriesController < ApplicationController
   # GET /categories.json
 
   def menu
+
     @items = Item.all
+    @categories = Category.all
   end
 
   def index

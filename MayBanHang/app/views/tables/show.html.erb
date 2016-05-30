@@ -13,7 +13,11 @@
 	<div id="form">
 		<%= render "orders/form" %>
 	</div>
-<%= link_to 'Edit', edit_table_path(@table) %>
+	<div class="actions">
+
+	
+	<%= link_to "Edit", edit_table_path(@table), :class => "btn btn-default" %>
+</div>
 </div>
 
 <div>

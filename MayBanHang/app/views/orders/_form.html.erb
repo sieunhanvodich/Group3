@@ -1,4 +1,4 @@
 <%= form_for([@table, @table.orders.build]) do |f| %>
 	<%= f.text_field :content, placeholder: " What do you want to order? " %>
-	<%= f.submit %>
+	<%= f.submit class: 'btn btn-default' %> 
 <% end %>

@@ -5,13 +5,17 @@ class CategoriesController < ApplicationController
   # GET /categories.json
 
   def menu
+<<<<<<< HEAD
 
     @items = Item.all
     @categories = Category.all
+=======
+    @items = Item.order('content ASC')
+>>>>>>> aa0ed0480b579dc4a975e3d337467739a9a4ef60
   end
 
   def index
-    @categories = Category.all
+    @categories = Category.order('content ASC')
   end
 
   # GET /categories/1

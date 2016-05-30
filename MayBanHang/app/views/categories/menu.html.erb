@@ -16,10 +16,7 @@
 	    });*/
 	    
 	    $("#btn<%= item.id %>").click(function(){
-	    	var itemcontent = "<%= item.content %> : <%= item.price %>\n";
-	    	var box = $("#text-box");
-	        /*$("ol").append("<li>" + itemcontent + "</li>");*/
-	        box.val(box.val() + itemcontent );
+	        window.top.change("<%= item.content %> : <%= item.price %>\n");
 	    });
 	});
 
@@ -34,9 +31,5 @@
 <% end %>
 	<!-- <ol></ol> -->
 	<!-- <textarea id="text-box" style="width: 500px; height: 300px"> </textarea> -->
-	<form accept-charset="UTF-8" action="" method="get">
-            <textarea id="text-box"></textarea>
-            <input type="submit" value ="Add to bill" id="go" />
-    </form>
 </body>
 </html>

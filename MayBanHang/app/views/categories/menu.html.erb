@@ -16,20 +16,22 @@
 	    });*/
 	    
 	    $("#btn<%= item.id %>").click(function(){
-	    	var itemcontent = "<%= item.content %> : <%= item.price %>";
-	        $("ol").append("<li>" + itemcontent + "</li>");
+/*	    	var itemcontent = "<%= item.content %> : <%= item.price %>";
+	        $("ol").append("<li>" + itemcontent + "</li>");*/
+
+            alert("<%= item.content %> : <%= item.price %>");
+	        window.top.change("<%= item.content %> : <%= item.price %>");
 	    });
 	});
 
 </script>
 	
-	<button id="btn<%= item.id %>">
+	<button id="btn<%= item.id %>" onclick="">
   	  <td><%= item.content %> </td>
   	  <td><%= item.price %></td> 
   	</button>
-  		
   	
 <% end %>
-	<ol></ol>
+
 </body>
 </html>

@@ -1,6 +1,10 @@
+<html>
+<head>
+
+</head>
+<body>
 <div>
 <p id="notice"><%= notice %></p>
-
 
 
 <p>
@@ -16,9 +20,12 @@
 </div>
 
 <div>
-	<iframe width="60%" height="1000px" style="display: inline; float: right;" src="/menu"></iframe>
+	<iframe id="myFrame" width="60%" height="1000px" style="display: inline; float: right;" src="/menu">
+	</iframe>
 </div>
 
 
 <%= link_to 'Edit', edit_table_path(@table) %>
 </div>
+</body>
+</html>

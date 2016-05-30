@@ -1,4 +1,21 @@
+<head>
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js">
+     var a;
+
+    function change(a){
+        alert(a);
+        window.top.location.reload(true);
+        
+    }
+
+     var innerWindow = document.getElementById('myFrame').contentWindow;
+    innerWindow.change= change;
+    
+    </script>
+
+</head>
+
 <%= form_for([@table, @table.orders.build]) do |f| %>
-	<%= f.text_field :content, placeholder: " What do you want to order? " %>
+	<%= f.text_field :content, value: Clipboard.paste %>
 	<%= f.submit %>
 <% end %>

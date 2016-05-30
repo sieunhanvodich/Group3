@@ -8,7 +8,7 @@
 
  <ul class="nav nav-tabs">
  	<% @categories.each do |category| %>
-  	<li role="presentation"  style="margin:2px; border-radius: 10px; background-color: #CAE5E8; text-transform: uppercase;"> <a data-toggle="tab" href="#<%= category.id %>"> <%= category.content %> </a> </li>
+  	<li role="presentation" style="margin:2px; border-radius: 10px; background-color: #CAE5E8; text-transform: uppercase;"> <a data-toggle="tab" href="#<%= category.id %>"> <%= category.content %> </a> </li>
 	<% end %>
 	<li style="margin:2px; border-radius: 10px; background-color: #CAE5E8; font-size: 10px" role="presentation" > <a data-toggle="tab" href="#add"> <span class="glyphicon glyphicon-plus" style="font-size: 17px"> </a></li>
 </ul>

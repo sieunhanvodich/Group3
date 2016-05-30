@@ -8,35 +8,14 @@
 </head>
 <body>
 
-<<<<<<< HEAD
+
  <% Category.includes(:items).order('categories.id').each do |category| %>
     <p style="text-align: left; text-transform: uppercase; font-size: 20px; color: black"> <%= category.content %>  </p>
     <% category.items.each do |item| %>
       <button id="btn<%= item.id %>" style="width:150px; display: inline-block; margin-right: 14px; margin-bottom: 10px;"><%= item.content %> </button>
 <% end %>
 <% end %>
-=======
-	$(document).ready(function(){
-	    /*$("#btn1").click(function(){
-	        $("p").append( <b>Appended text</b>.);
-	    });*/
-	    
-	    $("#btn<%= item.id %>").click(function(){
-	        window.top.change("<%= item.content %> : <%= item.price %>\n");
-	    });
-	});
 
-</script>
-	
-	<button id="btn<%= item.id %>" style="width:150px; display: inline-block; margin-right: 14px; margin-bottom: 10px;">
-  	  <td><%= item.content %> </td>
-  	  
-  	</button>
-  		
-  	
-<% end %>
-	<!-- <ol></ol> -->
-	<!-- <textarea id="text-box" style="width: 500px; height: 300px"> </textarea> -->
 </body>
 </html>
->>>>>>> aa0ed0480b579dc4a975e3d337467739a9a4ef60
+

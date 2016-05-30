@@ -58,7 +58,7 @@ html, body {
   padding: 0;
   width: 100%;
   height: 630px;
-  background-image: url('b2.jpg');
+  background: image-url('b2.jpg');
   background-size: 100% 100%;
 }
 
@@ -1926,7 +1926,7 @@ ul{
 
     overflow: hidden;
 
-    background-image: url('b1.png');
+    background: image-url('b1.png');
 
     background-repeat: no-repeat;
 
@@ -2076,7 +2076,7 @@ ul{
 
     padding-right: 25px;
 
-    background-image: url('../images/page-home-new/img15.png');
+    background:image-url('../images/page-home-new/img15.png');
 
     background-repeat: no-repeat;
 
@@ -5082,7 +5082,7 @@ ul{
    }
 
    .login {
-   background-image: url('b2.png');
+   background: image-url('b2.png');
    }
 
 

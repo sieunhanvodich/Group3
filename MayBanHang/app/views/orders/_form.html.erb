@@ -1,27 +1,4 @@
 <%= form_for([@table, @table.orders.build]) do |f| %>
 	<%= f.text_field :content, placeholder: " What do you want to order? " %>
-<<<<<<< HEAD
 	<%= f.submit class: 'btn btn-default' %> 
 <% end %>
-=======
-
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
-<script type="text/javascript">
-
-	var x;
-	function change(x){
-		var box = $("#text-box");
-	    /*$("ol").append("<li>" + itemcontent + "</li>");*/
-	    box.val(box.val() + x );
-	}
-
-	var innerWindow = document.getElementById('myFrame').contentWindow;
-    innerWindow.change= change;
-
-</script>
-	<form accept-charset="UTF-8" action="	<% f.submit %>" method="get">
-            <textarea id="text-box" action="<% f.text_field :content %>">X</textarea>
-            <input type="submit" value ="Add to bill" id="go" />
-    </form>
-    <% end %>
->>>>>>> aa0ed0480b579dc4a975e3d337467739a9a4ef60

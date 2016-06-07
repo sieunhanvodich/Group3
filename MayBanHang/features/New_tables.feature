@@ -7,6 +7,4 @@ Feature: Adding new tables
 		Given i already logged in as admin
 			And I should see "Vào ứng dụng" button
 		When I press Vào ứng dụng I should see categories page
-			And I press add new table
-			And I fill in the table form
-		Then I should see the annoucement "Table was successfully created."
+			

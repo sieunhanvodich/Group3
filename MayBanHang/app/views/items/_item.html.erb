@@ -3,7 +3,7 @@
 
 			<span class="ionicons ion-android-restaurant" style="font-size: 30px"><span style="font-size: 20px" >  <%= item.content %> : <%= item.price %></span></span>
 			
-    <%if if current_user && current_user.admin? %>			
+    <%if  current_user && current_user.admin? %>			
 		</div>
 		<div class="trash" style="display: inline-block;">
 			<%= link_to '<i class="glyphicon glyphicon-trash" style="margin-left: 20px"></i>'.html_safe, category_item_path(@category, item.id), method: :delete, data: { confirm: "Are you sure?" } %>

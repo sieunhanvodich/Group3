@@ -14,10 +14,6 @@
 </tr>
 
 </table>
-<h2> Order: </h2>
-<p id="orders"></p>
-<h2> total price: </h2>
-<p id="price"></p>
 	<% f.text_field :content, placeholder: " What do you want to order? " %>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
 <script type="text/javascript">
@@ -85,7 +81,7 @@
 
 </script>
 	<form onsubmit="return false;">
-            <textarea id="text-box"></textarea>
+            <textarea id="text-box" style="display:none"></textarea>
             <input type="button" onclick="deleteAll(); return false;" value ="Delete All Orders" id="go" />
             <input type="button" onclick="myFunction(); return false;" value ="Add to bill" id="go" />
     </form>

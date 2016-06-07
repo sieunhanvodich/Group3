@@ -9,7 +9,7 @@ Category.create!([
   {content: "Fresh", description: ""},
   {content: "Frappucino", description: ""},
   {content: "Iced tea", description: ""},
-  {content: "hot tea", description: ""}
+  {content: "Hot tea", description: ""}
 ])
 Item.create!([
   {content: "Cà phê đen", price: "20000", category_id: 1},
@@ -26,7 +26,6 @@ Item.create!([
   {content: "Xoài, Chanh leo", price: "40000", category_id: 4},
   {content: "Việt quất, chuối, sữa chua", price: "40000", category_id: 4},
   {content: "Xoài, đu đủ, sữa chua", price: "40000", category_id: 4},
-  {content: "Green CO2 - Táo xanh, kiwi", price: "28000", category_id: 5},
   {content: "Into the Blue - Việt Quất", price: "28000", category_id: 5},
   {content: "Sky Fall - Vải", price: "28000", category_id: 5},
   {content: "Fruit Milk Shake", price: "35000", category_id: 6},
@@ -53,4 +52,20 @@ Item.create!([
   {content: "Trà hoa cúc", price: "22000", category_id: 11},
   {content: "Trà mạn", price: "12000", category_id: 11},
   {content: "Green Mate", price: "30000", category_id: 11}
+])
+Table.create!([
+  {title: nil, description: "2"},
+  {title: nil, description: "3"},
+  {title: nil, description: "4"},
+  {title: nil, description: "4"},
+  {title: nil, description: "5"},
+  {title: nil, description: "2"},
+  {title: nil, description: "4"},
+  {title: nil, description: "3"},
+  {title: nil, description: "2"}
+])
+User.create!([
+  {first_name: "Thanh", last_name: "pham tien", email: "vic.geniusgaming@gmail.com", password_digest: "$2a$10$f0FHqZtJwn0MPuRcq/rzyuaPXFDZt0QCWQ9bqO9QD60sAHvSA2FBG", admin: false},
+  {first_name: "vu", last_name: "vic", email: "vicnoob@gmail.com", password_digest: "$2a$10$2UEdB6/94ifqCa58ObpI7.wuEw3mhAaQYyQWXUQbwr2qIzeRat3ba", admin: true},
+  {first_name: "dduc", last_name: "minh", email: "ducminh@gmail.com", password_digest: "$2a$10$luKeOWGVQEMTzns4vSEyYuaRZ2dUmdE6V/i.vCSVNuRE7WQn6PwGa", admin: false}
 ])

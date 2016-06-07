@@ -26,7 +26,6 @@ Item.create!([
   {content: "Xoài, Chanh leo", price: "40000", category_id: 4},
   {content: "Việt quất, chuối, sữa chua", price: "40000", category_id: 4},
   {content: "Xoài, đu đủ, sữa chua", price: "40000", category_id: 4},
-  {content: "Green CO2 - Táo xanh, kiwi", price: "28000", category_id: 5},
   {content: "Into the Blue - Việt Quất", price: "28000", category_id: 5},
   {content: "Sky Fall - Vải", price: "28000", category_id: 5},
   {content: "Fruit Milk Shake", price: "35000", category_id: 6},

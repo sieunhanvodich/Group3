@@ -1,0 +1,4 @@
+language: node_js
+node_is:
+ - "stable"
+script: gulp travis

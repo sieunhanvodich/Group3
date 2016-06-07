@@ -1,4 +1,4 @@
-Given(/^i already logged in$/) do
+Given(/^i already logged in as admin$/) do
   @current_user
 end
 
@@ -10,17 +10,16 @@ Given(/^I click "([^"]*)"$/) do |link|
   click_link(link)
 end
 
+When(/^I press add new category$/) do
+  find('#addcate' , :visible => false).click
+end
 
 
 When(/^I press Vào ứng dụng I should see categories page$/) do 
   visit categories_path
 end
 
-When(/^I press "([^"]*)"$/) do |link|
-  click_link(link)
-end
-
-
+  
 When(/^I fill in the category form$/) do
   visit new_category_path
   fill_in "content", :with => "Fish"

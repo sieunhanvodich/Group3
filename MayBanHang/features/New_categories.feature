@@ -4,10 +4,10 @@ Feature: Adding new categories
 	so that I can show and sale them to the customer
 
 	Scenario: Adding product's category
-		Given i already logged in
+		Given i already logged in as admin
 			And I should see "Vào ứng dụng" button
 		When I press Vào ứng dụng I should see categories page
-			And I press "+"
+			And I press add new category
 			And I fill in the category form
 		Then I should see the annoucement "Category was successfully created."
 

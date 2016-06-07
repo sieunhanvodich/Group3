@@ -1,5 +1,5 @@
 <div style="width: 300px">
-<% if current_user.admin? %>
+<% if current_user && current_user.admin? %>
 <%= form_for([@category, @category.items.build]) do |f| %>
 	<%= f.text_field :content, placeholder: "Item" %>
 	<%= f.text_field :price, placeholder: "Price" %>

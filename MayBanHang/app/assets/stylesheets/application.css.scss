@@ -573,7 +573,35 @@ ul#top-menu ul li a{padding:0 0 0 12px;width:160px}
 
 ul#top-menu li:hover ul ul,ul#top-menu li.sfhover ul ul{left:197px!important;top:-12px!important}
 
+#logo1 {
 
+  display: inline-block;
+
+  height: 50px;
+
+  position: absolute;
+
+  top: 20px;
+
+  left: 250px;
+
+  width: 250px;
+
+}
+.contact {
+  color: white;
+  text-transform: uppercase;
+  height: 40px;
+  width: 90px;
+}
+.contact:hover{
+cursor:pointer;
+height: 40px;
+width: 90px;
+background-color: #c01c2b;
+text-align: center;
+
+}
 
 #wrap-header{
 

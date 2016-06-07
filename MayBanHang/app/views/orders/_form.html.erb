@@ -1,7 +1,22 @@
 <%= form_for([@table, @table.orders.build]) do |f| %>
+<table width=100%>
+<tr>
+<td>order</td>
+<td>price</td>
+</tr>
+<tr>
+<td id="orders"></td>
+<td id="price_each"></td>
+</tr>
+<tr>
+<td>total price</td>
+<td id="price"></td>
+</tr>
+
+</table>
 <h2> Order: </h2>
 <p id="orders"></p>
-<h2> Price: </h2>
+<h2> total price: </h2>
 <p id="price"></p>
 	<% f.text_field :content, placeholder: " What do you want to order? " %>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
@@ -10,6 +25,24 @@
 	var x;
 	var textall = '';
 	var sum =0;
+    var price_each = '';
+    function setCookie(cname, cvalue) {
+    document.cookie = cname + "=" + cvalue;
+    } 
+    function getCookie(cname) {
+    var name = cname + "=";
+    var ca = document.cookie.split(';');
+    for(var i = 0; i <ca.length; i++) {
+        var c = ca[i];
+        while (c.charAt(0)==' ') {
+            c = c.substring(1);
+        }
+        if (c.indexOf(name) == 0) {
+            return c.substring(name.length,c.length);
+        }
+    }
+    return "";
+    } 
 	function change(x){
 		var box = $("#text-box");
 	    /*$("ol").append("<li>" + itemcontent + "</li>");*/
@@ -19,16 +52,24 @@
     function myFunction() {
         
         var text = document.getElementById("text-box").value;
+        var order = text.replace(/[0-9]/g, '');;
+
         var thenum = text.replace( /^\D+/g, '');
         var convert = parseInt(thenum);
        
+        textall = getCookie("order");
+        sum = parseInt(getCookie("sum"));
 
-        textall = document.cookie;
         sum = sum + convert;
-        textall = textall + "<br>" + text;
+        textall = textall + "<br>" + order;
+        price_each = price_each + "<br>" + thenum;
+
+        document.getElementById("price_each").innerHTML = price_each;
         document.getElementById("orders").innerHTML = textall;
         document.getElementById("price").innerHTML =  sum;
-        document.cookie = textall;
+
+        setCookie("order", textall);
+        setCookie("sum", sum);
     }
 
 	var innerWindow = document.getElementById('myFrame').contentWindow;
@@ -37,7 +78,8 @@
     function deleteAll(){
         textall = '';
         sum = 0;
-        document.cookie = '';
+        setCookie("order", textall);
+        setCookie("sum", sum);
         window.location.reload(true);
     }
 
